@@ -7768,6 +7768,16 @@ High-power, low thermal resistance package.</description>
 <technology name=""/>
 </technologies>
 </device>
+<device name="" package="SOT23">
+<connects>
+<connect gate="G$1" pin="D" pad="3"/>
+<connect gate="G$1" pin="G" pad="1"/>
+<connect gate="G$1" pin="S" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
 </devices>
 </deviceset>
 </devicesets>
@@ -7938,7 +7948,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="R8" library="resistor" deviceset="R-EU_" device="R0603"/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="P+8" library="supply1" deviceset="+18V" device="" value="VPANEL"/>
-<part name="IC2" library="SparkFun-PowerIC" deviceset="V_REG_LM1117" device="SOT223"/>
+<part name="IC2" library="SparkFun-PowerIC" deviceset="V_REG_LM1117" device="SOT223" value="5v"/>
 <part name="C4" library="resistor" deviceset="C-EU" device="C0603K" value="1uF"/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="P+9" library="supply1" deviceset="+5V" device=""/>
@@ -7962,7 +7972,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
 <part name="R9" library="resistor" deviceset="R-EU_" device="R0603" value="10k"/>
 <part name="Q3" library="SparkFun-DiscreteSemi" deviceset="MOSFET-NCHANNEL" device="BSS138"/>
-<part name="Q2" library="SparkFun-DiscreteSemi" deviceset="MOSFET-PCHANNEL" device="SMD"/>
+<part name="Q2" library="SparkFun-DiscreteSemi" deviceset="MOSFET-PCHANNEL" device="" value="MOSFET-PCHANNEL"/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
 <part name="P+16" library="supply1" deviceset="V+" device="" value="V-gate"/>
 </parts>
@@ -8358,12 +8368,12 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <segment>
 <pinref part="R3" gate="G$1" pin="2"/>
 <pinref part="R2" gate="G$1" pin="1"/>
-<wire x1="-27.94" y1="12.7" x2="-27.94" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="-27.94" y1="15.24" x2="-27.94" y2="20.32" width="0.1524" layer="91"/>
-<label x="-27.94" y="15.24" size="1.27" layer="95" rot="MR0"/>
-<junction x="-27.94" y="15.24"/>
-<pinref part="IC1" gate="1" pin="ANALOG_2"/>
-<wire x1="-45.72" y1="15.24" x2="-27.94" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="-27.94" y1="12.7" x2="-27.94" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="-27.94" y1="17.78" x2="-27.94" y2="20.32" width="0.1524" layer="91"/>
+<label x="-27.94" y="17.78" size="1.27" layer="95" rot="MR0"/>
+<junction x="-27.94" y="17.78"/>
+<wire x1="-45.72" y1="17.78" x2="-27.94" y2="17.78" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="1" pin="ANALOG_1"/>
 </segment>
 </net>
 <net name="+15V" class="0">
@@ -8599,12 +8609,12 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <segment>
 <pinref part="R8" gate="G$1" pin="2"/>
 <pinref part="R7" gate="G$1" pin="1"/>
-<wire x1="-15.24" y1="12.7" x2="-15.24" y2="17.78" width="0.1524" layer="91"/>
-<label x="-15.24" y="17.78" size="1.27" layer="95" rot="MR0"/>
-<wire x1="-15.24" y1="17.78" x2="-15.24" y2="20.32" width="0.1524" layer="91"/>
-<junction x="-15.24" y="17.78"/>
-<wire x1="-15.24" y1="17.78" x2="-45.72" y2="17.78" width="0.1524" layer="91"/>
-<pinref part="IC1" gate="1" pin="ANALOG_1"/>
+<wire x1="-15.24" y1="12.7" x2="-15.24" y2="15.24" width="0.1524" layer="91"/>
+<label x="-15.24" y="15.24" size="1.27" layer="95" rot="MR0"/>
+<wire x1="-15.24" y1="15.24" x2="-15.24" y2="20.32" width="0.1524" layer="91"/>
+<junction x="-15.24" y="15.24"/>
+<wire x1="-15.24" y1="15.24" x2="-45.72" y2="15.24" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="1" pin="ANALOG_2"/>
 </segment>
 </net>
 <net name="FET-PUMP" class="0">
@@ -8613,8 +8623,13 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <pinref part="Q1" gate="G$1" pin="G"/>
 <pinref part="R9" gate="G$1" pin="2"/>
 <wire x1="50.8" y1="10.16" x2="50.8" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="50.8" y1="12.7" x2="43.18" y2="12.7" width="0.1524" layer="91"/>
 <junction x="50.8" y="12.7"/>
+<wire x1="38.1" y1="12.7" x2="50.8" y2="12.7" width="0.1524" layer="91"/>
+<pinref part="Q3" gate="G$1" pin="D"/>
+<wire x1="38.1" y1="10.16" x2="38.1" y2="12.7" width="0.1524" layer="91"/>
+<pinref part="Q2" gate="G$1" pin="D"/>
+<wire x1="38.1" y1="15.24" x2="38.1" y2="12.7" width="0.1524" layer="91"/>
+<junction x="38.1" y="12.7"/>
 </segment>
 </net>
 <net name="N$8" class="0">
@@ -8625,6 +8640,7 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <pinref part="C7" gate="G$1" pin="2"/>
 <wire x1="-17.78" y1="91.44" x2="-20.32" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="-17.78" y1="88.9" x2="-17.78" y2="91.44" width="0.1524" layer="91"/>
+<junction x="-17.78" y="91.44"/>
 </segment>
 </net>
 <net name="N$10" class="0">
@@ -8682,19 +8698,29 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/74HC_H
 <pinref part="P+16" gate="1" pin="V+"/>
 </segment>
 </net>
-<net name="N$28" class="0">
-<segment>
-<wire x1="38.1" y1="12.7" x2="43.18" y2="12.7" width="0.1524" layer="91"/>
-<pinref part="Q3" gate="G$1" pin="D"/>
-<wire x1="38.1" y1="10.16" x2="38.1" y2="12.7" width="0.1524" layer="91"/>
-<pinref part="Q2" gate="G$1" pin="D"/>
-<wire x1="38.1" y1="15.24" x2="38.1" y2="12.7" width="0.1524" layer="91"/>
-<junction x="38.1" y="12.7"/>
-</segment>
-</net>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="104,1,-106.68,-35.56,IC1,GND1,GND,,,"/>
+<approved hash="104,1,-106.68,-7.62,IC1,VCC1,+5V,,,"/>
+<approved hash="104,1,-106.68,-30.48,IC1,GND/ANALOG,GND,,,"/>
+<approved hash="104,1,-106.68,-38.1,IC1,GND2,GND,,,"/>
+<approved hash="104,1,-106.68,-10.16,IC1,VCC2,+5V,,,"/>
+<approved hash="104,1,-71.12,96.52,IC3P,VCC,+5V,,,"/>
+<approved hash="206,1,-83.82,91.44,+5V,,,,,"/>
+<approved hash="206,1,-83.82,88.9,+5V,,,,,"/>
+<approved hash="208,1,-124.46,25.4,+5V,sup,,,,"/>
+<approved hash="208,1,-86.36,48.26,+5V,sup,,,,"/>
+<approved hash="208,1,35.56,-38.1,+5V,sup,,,,"/>
+<approved hash="208,1,7.62,-15.24,+5V,sup,,,,"/>
+<approved hash="208,1,-50.8,55.88,+5V,sup,,,,"/>
+<approved hash="208,1,-83.82,91.44,+5V,out,,,,"/>
+<approved hash="208,1,-83.82,88.9,+5V,out,,,,"/>
+<approved hash="208,1,-78.74,101.6,+5V,sup,,,,"/>
+<approved hash="113,1,-96.52,44.2172,ISP,,,,,"/>
+<approved hash="113,1,-67.7926,45.5253,JP2,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 </eagle>
