@@ -2425,6 +2425,18 @@ design rules under a new name.</description>
 <wire x1="18.89125" y1="27.305" x2="18.25625" y2="27.94" width="0.2032" layer="16"/>
 <wire x1="18.25625" y1="27.94" x2="18.25625" y2="29.68625" width="0.2032" layer="16"/>
 <wire x1="18.25625" y1="29.68625" x2="19.685" y2="31.115" width="0.2032" layer="16"/>
+<polygon width="0.2032" layer="16" isolate="0.4064" orphans="yes" rank="4">
+<vertex x="0" y="44.92625"/>
+<vertex x="0" y="0"/>
+<vertex x="58.1025" y="0"/>
+<vertex x="58.1025" y="44.92625"/>
+</polygon>
+<polygon width="0.2032" layer="1" isolate="0.4064" orphans="yes" rank="4">
+<vertex x="0" y="44.92625"/>
+<vertex x="0" y="0"/>
+<vertex x="58.1025" y="0"/>
+<vertex x="58.1025" y="44.92625"/>
+</polygon>
 </signal>
 <signal name="VBAT-READ">
 <contactref element="R3" pad="2"/>
@@ -2847,20 +2859,6 @@ design rules under a new name.</description>
 <signal name="N$12">
 </signal>
 <signal name="N$13">
-</signal>
-<signal name="GNDD">
-<polygon width="0.2032" layer="1" isolate="0.4064" orphans="yes" rank="4">
-<vertex x="90.4875" y="44.92625"/>
-<vertex x="90.4875" y="0"/>
-<vertex x="58.1025" y="0"/>
-<vertex x="58.1025" y="44.92625"/>
-</polygon>
-<polygon width="0.2032" layer="16" isolate="0.4064" orphans="yes" rank="4">
-<vertex x="89.2175" y="44.92625"/>
-<vertex x="89.2175" y="0"/>
-<vertex x="58.1025" y="0"/>
-<vertex x="58.1025" y="44.92625"/>
-</polygon>
 </signal>
 <signal name="N$14">
 <contactref element="L1" pad="P$2"/>
