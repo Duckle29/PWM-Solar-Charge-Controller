@@ -1,4 +1,7 @@
 # PWM-Solar-Charge-Controller
+
+This project is dead for the forseeable future. I've lost interest in it, and time to work on projects in general is limited.
+
 This is an attempt at making an Arduino powered PWM solar charge controller.
 
 The design of this controller is heavily based on Julian Iletts PWM5 controller, which he sadly discontinued.
