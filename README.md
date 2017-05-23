@@ -39,4 +39,5 @@ The following things need to be added:
 ### Additional notes
 If I decide the board is ready to go, I will order some assembled boards. If people are interested in some assembled boards, then comment in the issue that I opened for that purpose. I might order some home and send them to you for the price it cost me, and nothing more (that's assembled board cost + shipping)
 
+
 Greetings!
