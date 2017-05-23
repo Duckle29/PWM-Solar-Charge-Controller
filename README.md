@@ -1,4 +1,8 @@
 # PWM-Solar-Charge-Controller
+
+I have decided to revive this project again. It's gonna be brought back as the PWM10, as It'll be designed to handle 10A, which is a little over a 140W panel.
+The Rev2 files are designed using KiCAD
+
 This is an attempt at making an Arduino powered PWM solar charge controller.
 
 The design of this controller is heavily based on Julian Iletts PWM5 controller, which he sadly discontinued.

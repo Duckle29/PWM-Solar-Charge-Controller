@@ -1,3 +1,5 @@
 *.?#*
 *.zip
 *.elp
+*.bak
+*-save.kicad_pcb
